@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Мотоэксперт — учебный сайт мотосервиса. Ремонт, диагностика, обслуживание, тюнинг и консультации. Демонстрационная заявка с описанием проблемы и телефоном для звонка.">
+  <meta name="theme-color" content="#344045">
+  <meta http-equiv="Content-Security-Policy" content="form-action 'none'; base-uri 'none'; connect-src 'none'">
+  <title>Мотоэксперт — ремонт, диагностика и тюнинг мотоциклов</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <div class="demo-bar"><span class="demo-dot" aria-hidden="true"></span> Учебный проект · название вымышленное · заявки не отправляются</div>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="Мотоэксперт — начало страницы">
+      <span class="brand-symbol" aria-hidden="true">↗</span>
+      <span>МОТО<span class="brand-bottom">ЭКСПЕРТ<span class="brand-dot">.</span></span></span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#process">Порядок обращения</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="header-cta" href="#request">Оставить заявку <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="orange-line"></span> МОТОЭКСПЕРТ / МОТОСЕРВИС</p>
+        <h1 id="hero-title">РЕМОНТ И ТЮНИНГ<br><span>МОТОЦИКЛОВ</span></h1>
+        <p class="hero-description">Диагностика неисправностей, плановое обслуживание, ремонт и установка оборудования. В заявке укажите модель мотоцикла, опишите задачу и оставьте телефон для согласования.</p>
+        <a class="button primary" href="#request">Заполнить заявку <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Учебная форма: заполнение без отправки данных.</p>
+        <div class="hero-tags"><span>РЕМОНТ</span><span>ДИАГНОСТИКА</span><span>ТЮНИНГ</span></div>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/motorcycle.webp" alt="Классический мотоцикл Norton у кирпичной стены" width="1800" height="1198" fetchpriority="high">
+        <figcaption><span>МОТОЭКСПЕРТ · РЕМОНТ И ОБСЛУЖИВАНИЕ</span><span aria-hidden="true">01 / МОТО</span></figcaption>
+        <div class="photo-label">Иллюстративное фото<br>Не работа мастерской</div>
+      </figure>
+    </section>
+    <section id="services" class="services section wrap" aria-labelledby="services-title">
+      <div class="section-heading">
+        <div><p class="eyebrow muted">01 / УСЛУГИ</p><h2 id="services-title">УСЛУГИ МОТОСЕРВИСА</h2></div>
+        <p class="section-intro">Выберите услугу и опишите задачу.<br>Точный объём и стоимость работ требуют согласования.</p>
+      </div>
+      <div class="service-list">
+        <article class="service-row"><span class="row-number">01</span><div><h3>Ремонт и обслуживание</h3><p>Двигатель, тормоза, подвеска, электрика. Плановое ТО и подготовка к сезону.</p></div><button class="service-pick" type="button" data-service="Ремонт и обслуживание" aria-label="Выбрать ремонт и обслуживание">↗</button></article>
+        <article class="service-row"><span class="row-number">02</span><div><h3>Диагностика</h3><p>Поиск причин проблем с запуском, посторонних звуков и нестабильной работы мотоцикла.</p></div><button class="service-pick" type="button" data-service="Диагностика" aria-label="Выбрать диагностику">↗</button></article>
+        <article class="service-row"><span class="row-number">03</span><div><h3>Тюнинг и доработки</h3><p>Эргономика, внешний вид, установка оборудования. Обсудим совместимость и ограничения.</p></div><button class="service-pick" type="button" data-service="Тюнинг и доработки" aria-label="Выбрать тюнинг и доработки">↗</button></article>
+        <article class="service-row"><span class="row-number">04</span><div><h3>Консультация</h3><p>Вопросы по обслуживанию, ремонту, подбору оборудования и планируемым доработкам.</p></div><button class="service-pick" type="button" data-service="Консультация" aria-label="Выбрать консультацию">↗</button></article>
+      </div>
+    </section>
+    <section id="process" class="process-section" aria-labelledby="process-title">
+      <div class="wrap section">
+        <p class="eyebrow muted">02 / ЭТАПЫ</p>
+        <div class="process-top"><h2 id="process-title">ПОРЯДОК ОБРАЩЕНИЯ</h2><p>Заявка содержит сведения для обратного звонка.<br>Она не заменяет диагностику и не фиксирует стоимость.</p></div>
+        <ol class="process-grid">
+          <li><span>01</span><h3>Заполнение заявки</h3><p>Услуга, модель мотоцикла, описание проблемы и телефон для связи.</p></li>
+          <li><span>02</span><h3>Обратный звонок</h3><p>После подключения отправки мастер сможет получить сведения и уточнить детали по телефону.</p></li>
+          <li><span>03</span><h3>Согласование работ</h3><p>Порядок диагностики, запись и стоимость обсуждаются до начала работ.</p></li>
+        </ol>
+        <p class="process-demo">Показан предполагаемый процесс сервиса. В этой учебной версии звонков и реальной записи нет.</p>
+      </div>
+    </section>
+    <section id="request" class="request-section section wrap" aria-labelledby="request-title">
+      <div class="request-copy">
+        <p class="eyebrow muted">03 / ЗАЯВКА</p>
+        <h2 id="request-title">ЗАЯВКА<br><span>В МОТОСЕРВИС</span></h2>
+        <p>Укажите услугу, модель мотоцикла и описание проблемы. Оставьте номер телефона и удобное время для звонка.</p>
+        <div class="request-aside"><span aria-hidden="true">↗</span><p>В рабочем сайте заявка попадёт мастеру, а он свяжется с вами для согласования.</p></div>
+        <div class="demo-notice"><strong>Сейчас это демо</strong><p>Отправка не подключена. Для проверки используйте вымышленные данные. Сайт сам не сохраняет ответы и никуда их не передаёт.</p></div>
+      </div>
+      <div class="form-panel">
+        <noscript><p class="noscript-note">Для пошаговой формы нужен JavaScript. Включите его в браузере. Отправка данных в этом демо в любом случае не подключена.</p></noscript>
+        <form id="request-form" novalidate>
+          <div class="form-top"><span id="step-label" aria-live="polite">ШАГ 1 ИЗ 3</span><span>ВАША ЗАЯВКА <span aria-hidden="true">↗</span></span></div>
+          <ol class="step-track" aria-label="Этапы заявки"><li class="current" aria-current="step">Услуга</li><li>Мотоцикл</li><li>Контакт</li></ol>
+          <fieldset class="form-step" data-step="0">
+            <legend tabindex="-1">Какая помощь нужна?</legend>
+            <p class="field-hint">Выберите один вариант. Если сомневаетесь — последний.</p>
+            <div class="service-options">
+              <label class="radio-card"><input type="radio" name="service" value="Ремонт и обслуживание" required><span>Ремонт и обслуживание</span></label>
+              <label class="radio-card"><input type="radio" name="service" value="Диагностика" required><span>Диагностика</span></label>
+              <label class="radio-card"><input type="radio" name="service" value="Тюнинг и доработки" required><span>Тюнинг и доработки</span></label>
+              <label class="radio-card"><input type="radio" name="service" value="Консультация" required><span>Консультация</span></label>
+              <label class="radio-card wide"><input type="radio" name="service" value="Не знаю, нужна помощь" required><span>Пока не знаю — помогите разобраться</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step" data-step="1" hidden>
+            <legend tabindex="-1">Расскажите о мотоцикле</legend>
+            <label class="field-label" for="bike">Марка и модель <span>обязательно</span></label>
+            <input id="bike" name="bike" type="text" placeholder="Например, Honda CB400" required maxlength="100" autocomplete="off">
+            <div class="field-grid"><div><label class="field-label" for="year">Год выпуска <span>если знаете</span></label><input id="year" name="year" type="number" min="1900" max="2027" placeholder="Например, 2010" inputmode="numeric"></div><div><label class="field-label" for="ride">Мотоцикл на ходу?</label><select id="ride" name="ride"><option value="Не указано">Не знаю / не укажу</option><option>Да, на ходу</option><option>Нет, не на ходу</option></select></div></div>
+            <label class="field-label" for="problem">Что случилось или что хотите изменить? <span>обязательно</span></label>
+            <textarea id="problem" name="problem" rows="4" required minlength="10" maxlength="1500" placeholder="Например: после стоянки не заводится. Стартер крутит, аккумулятор заряжен."></textarea>
+            <p class="field-hint">Когда началось, как проявляется, что уже пробовали? Хотя бы 10 символов.</p>
+          </fieldset>
+          <fieldset class="form-step" data-step="2" hidden>
+            <legend tabindex="-1">Как с вами связаться?</legend>
+            <p class="field-hint">В рабочей версии по этому номеру мастер сможет уточнить детали.</p>
+            <label class="field-label" for="client-name">Как к вам обращаться <span>необязательно</span></label>
+            <input id="client-name" name="clientName" type="text" maxlength="60" autocomplete="off" placeholder="Тестовый клиент">
+            <label class="field-label" for="phone">Номер телефона <span>обязательно</span></label>
+            <input id="phone" name="phone" type="tel" required maxlength="25" autocomplete="off" inputmode="tel" placeholder="Для демо: +7 000 000-00-00" aria-describedby="phone-hint">
+            <p class="field-hint" id="phone-hint">10–15 цифр, можно с +, пробелами, скобками и дефисами. Для теста — вымышленный номер.</p>
+            <label class="field-label" for="call-time">Когда удобнее позвонить?</label>
+            <select id="call-time" name="callTime"><option>Время не указано</option><option>Утром, 9:00–12:00</option><option>Днём, 12:00–18:00</option><option>Вечером, 18:00–21:00</option></select>
+            <p class="field-hint">По местному времени клиента; точное время согласуется отдельно.</p>
+            <p class="demo-inline">Это проверка формы, не запись на ремонт. Данные никуда не отправятся.</p>
+          </fieldset>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <div class="form-actions"><button id="back-button" class="back-button" type="button" hidden>← Назад</button><button id="next-button" class="button primary" type="submit" disabled>Далее <span aria-hidden="true">→</span></button></div>
+          <p class="form-footnote">ДЕМО-РЕЖИМ · БЕЗ ОТПРАВКИ ДАННЫХ</p>
+        </form>
+        <section id="form-result" class="form-result" aria-labelledby="result-title" hidden>
+          <span class="result-icon" aria-hidden="true">✓</span><p class="eyebrow muted">ПРОВЕРКА ЗАВЕРШЕНА</p>
+          <h3 id="result-title" tabindex="-1">Форма заполнена.<br>Заявка не отправлена.</h3>
+          <p>Так будут выглядеть сведения для мастера после подключения настоящей отправки.</p>
+          <dl id="summary" class="summary"></dl>
+          <p class="demo-inline">Это учебный сайт: мастер не получил заявку и не будет звонить. Сайт сам не сохраняет ответы, но браузер может восстановить их. Для удаления из формы и итога нажмите «Очистить форму».</p>
+          <div class="result-actions"><button id="edit-button" type="button" class="button secondary">Изменить ответы</button><button id="clear-button" type="button" class="text-button">Очистить форму</button></div>
+        </section>
+      </div>
+    </section>
+    <section id="faq" class="faq-section wrap section" aria-labelledby="faq-title">
+      <div><p class="eyebrow muted">04 / ИНФОРМАЦИЯ</p><h2 id="faq-title">ВОПРОСЫ И ОТВЕТЫ</h2></div>
+      <div class="faq-list">
+        <details><summary>Я не знаю, что именно сломалось. Что писать?<span aria-hidden="true">+</span></summary><p>Опишите симптомы своими словами: когда возникает проблема, какие звуки слышны, что изменилось. Например: «После прогрева глохнет на холостых». Точный диагноз по одной заявке не ставится.</p></details>
+        <details><summary>Можно узнать стоимость до приезда?<span aria-hidden="true">+</span></summary><p>Заявка помогает начать обсуждение, но не является расчётом. Стоимость зависит от модели, состояния мотоцикла, диагностики и согласованного объёма работ. Выдуманных цен в этом учебном проекте нет.</p></details>
+        <details><summary>Что делать, если мотоцикл не на ходу?<span aria-hidden="true">+</span></summary><p>Укажите это в форме. В рабочем сервисе способ доставки и возможность приёма нужно обсудить с мастером. Не продолжайте движение при подозрении на опасную неисправность.</p></details>
+        <details><summary>Эта форма действительно отправляет заявку?<span aria-hidden="true">+</span></summary><p>Пока нет. Это учебный концепт для проверки дизайна и вопросов. Здесь нет реальной мастерской, приёма заявок или обратного звонка. Перед запуском нужно подключить получателя, добавить реальные сведения о сервисе и оформить обработку персональных данных.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap"><div class="footer-top"><p class="footer-brand">МОТОЭКСПЕРТ<span>.</span></p><a href="#request">Оставить заявку ↗</a></div><div class="footer-bottom"><p>Учебный концепт · не действующий мотосервис<br>Контакты, адрес и реальные условия работы ещё не добавлены.</p><p>Фото: <a href="https://commons.wikimedia.org/wiki/File:Norton_Motorcycle.jpg" target="_blank" rel="noopener noreferrer">Norton Motorcycle</a> / pyntofmyld / <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a><br>Изменения: уменьшение, WebP и кадрирование при показе.</p></div></div></footer>
+</body>
+</html>
