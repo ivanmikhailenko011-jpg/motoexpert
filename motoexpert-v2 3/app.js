@@ -22,7 +22,7 @@ function showStep(index, focus = true) {
     else item.removeAttribute("aria-current");
   });
   document.querySelector("#step-label").textContent = `ШАГ ${index + 1} ИЗ 3`;
-  nextButton.textContent = index === 2 ? "Проверить заявку →" : "Далее →";
+  nextButton.textContent = index === 2 ? "Показать итог →" : "Далее →";
   backButton.hidden = index === 0;
   error.hidden = true;
   error.textContent = "";
