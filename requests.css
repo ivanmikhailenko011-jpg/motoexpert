@@ -1,0 +1,10 @@
+.sandbox-confirmation { display: flex; align-items: flex-start; gap: 10px; margin-top: 22px; font-size: 12px; line-height: 1.6; }
+.sandbox-confirmation input { width: 20px; height: 20px; flex: 0 0 auto; margin-top: 2px; accent-color: #344045; }
+.delivery-reference { margin-top: 20px; font-size: 11px; color: #505a4b; }
+.delivery-reference code { display: block; overflow-wrap: anywhere; white-space: normal; margin-top: 5px; font-size: 12px; }
+.delivery-status { background: #e7e8df; padding: 14px; font-size: 12px; line-height: 1.75; margin: 16px 0 0; overflow-wrap: anywhere; }
+.delivery-status[data-kind="error"] { background: #f5e5e0; color: #762a22; border-left: 3px solid #9b2921; }
+.delivery-status[data-kind="accepted"] { background: #e2ebdd; color: #30442a; border-left: 3px solid #5b7450; }
+.delivery-actions { margin-top: 18px; }
+.delivery-actions button { max-width: 100%; white-space: normal; text-align: left; }
+button:disabled { opacity: .55; cursor: not-allowed; }

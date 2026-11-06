@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Мотоэксперт — учебный сайт мотосервиса. Ремонт, диагностика, обслуживание, тюнинг и консультации. Демонстрационная заявка с описанием проблемы и телефоном для звонка.">
   <meta name="theme-color" content="#344045">
-  <meta http-equiv="Content-Security-Policy" content="form-action 'none'; base-uri 'none'; connect-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="form-action https://formspree.io; base-uri 'none'; connect-src 'none'; object-src 'none'">
   <title>Мотоэксперт — ремонт, диагностика и тюнинг мотоциклов</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="requests.css">
   <script src="app.js" defer></script>
+  <script src="delivery-core.js" defer></script>
+  <script src="delivery-ui.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
-  <div class="demo-bar"><span class="demo-dot" aria-hidden="true"></span> Учебный проект · название вымышленное · заявки не отправляются</div>
+  <div class="demo-bar"><span class="demo-dot" aria-hidden="true"></span> Учебный проект · только вымышленные данные · приём теста требует проверки</div>
   <header class="header wrap">
     <a class="brand" href="#" aria-label="Мотоэксперт — начало страницы">
       <span class="brand-symbol" aria-hidden="true">↗</span>
@@ -32,7 +35,7 @@
         <h1 id="hero-title">РЕМОНТ И ТЮНИНГ<br><span>МОТОЦИКЛОВ</span></h1>
         <p class="hero-description">Диагностика неисправностей, плановое обслуживание, ремонт и установка оборудования. В заявке укажите модель мотоцикла, опишите задачу и оставьте телефон для согласования.</p>
         <a class="button primary" href="#request">Заполнить заявку <span aria-hidden="true">↗</span></a>
-        <p class="hero-note">Учебная форма: заполнение без отправки данных.</p>
+        <p class="hero-note">Учебная форма: проверка ответов и отдельная тестовая отправка.</p>
         <div class="hero-tags"><span>РЕМОНТ</span><span>ДИАГНОСТИКА</span><span>ТЮНИНГ</span></div>
       </div>
       <figure class="hero-media">
@@ -71,11 +74,12 @@
         <h2 id="request-title">ЗАЯВКА<br><span>В МОТОСЕРВИС</span></h2>
         <p>Укажите услугу, модель мотоцикла и описание проблемы. Оставьте номер телефона и удобное время для звонка.</p>
         <div class="request-aside"><span aria-hidden="true">↗</span><p>В рабочем сайте заявка попадёт мастеру, а он свяжется с вами для согласования.</p></div>
-        <div class="demo-notice"><strong>Сейчас это демо</strong><p>Отправка не подключена. Для проверки используйте вымышленные данные. Сайт сам не сохраняет ответы и никуда их не передаёт.</p></div>
+        <div class="demo-notice"><strong>Учебный тест, не запись на ремонт</strong><p>Используйте только вымышленные данные. После проверки ответов можно отдельно отправить тест в Formspree. Ответ сервиса откроется в новой вкладке. Реальное получение подтверждается записью в кабинете, а не сообщением на этой странице.</p></div>
       </div>
       <div class="form-panel">
-        <noscript><p class="noscript-note">Для пошаговой формы нужен JavaScript. Включите его в браузере. Отправка данных в этом демо в любом случае не подключена.</p></noscript>
-        <form id="request-form" novalidate>
+        <noscript><p class="noscript-note">Для пошаговой формы нужен JavaScript. Включите его в браузере. Отправка без JavaScript отключена; используйте учебную пошаговую форму.</p></noscript>
+        <form id="request-form" name="motoexpert-github-training" method="POST" action="https://formspree.io/f/xrppvgzp" target="_blank" rel="noopener noreferrer" novalidate>
+          <input type="hidden" name="requestId" value="">
           <div class="form-top"><span id="step-label" aria-live="polite">ШАГ 1 ИЗ 3</span><span>ВАША ЗАЯВКА <span aria-hidden="true">↗</span></span></div>
           <ol class="step-track" aria-label="Этапы заявки"><li class="current" aria-current="step">Услуга</li><li>Мотоцикл</li><li>Контакт</li></ol>
           <fieldset class="form-step" data-step="0">
@@ -105,22 +109,26 @@
             <input id="client-name" name="clientName" type="text" maxlength="60" autocomplete="off" placeholder="Тестовый клиент">
             <label class="field-label" for="phone">Номер телефона <span>обязательно</span></label>
             <input id="phone" name="phone" type="tel" required maxlength="25" autocomplete="off" inputmode="tel" placeholder="Для демо: +7 000 000-00-00" aria-describedby="phone-hint">
-            <p class="field-hint" id="phone-hint">10–15 цифр, можно с +, пробелами, скобками и дефисами. Для теста — вымышленный номер.</p>
+            <p class="field-hint" id="phone-hint">Для учебной отправки используйте только +7 000 000-00-00. Реальные номера здесь не принимаются.</p>
             <label class="field-label" for="call-time">Когда удобнее позвонить?</label>
             <select id="call-time" name="callTime"><option>Время не указано</option><option>Утром, 9:00–12:00</option><option>Днём, 12:00–18:00</option><option>Вечером, 18:00–21:00</option></select>
             <p class="field-hint">По местному времени клиента; точное время согласуется отдельно.</p>
-            <p class="demo-inline">Это проверка формы, не запись на ремонт. Данные никуда не отправятся.</p>
+            <p class="demo-inline">На следующем экране проверьте ответы. Без отдельного нажатия «Отправить тест» ничего не отправляется.</p>
           </fieldset>
           <p id="form-error" class="form-error" role="alert" hidden></p>
           <div class="form-actions"><button id="back-button" class="back-button" type="button" hidden>← Назад</button><button id="next-button" class="button primary" type="submit" disabled>Далее <span aria-hidden="true">→</span></button></div>
-          <p class="form-footnote">ДЕМО-РЕЖИМ · БЕЗ ОТПРАВКИ ДАННЫХ</p>
+          <p class="form-footnote">УЧЕБНЫЙ РЕЖИМ · ТОЛЬКО ВЫМЫШЛЕННЫЕ ДАННЫЕ</p>
         </form>
         <section id="form-result" class="form-result" aria-labelledby="result-title" hidden>
-          <span class="result-icon" aria-hidden="true">✓</span><p class="eyebrow muted">ПРОВЕРКА ЗАВЕРШЕНА</p>
-          <h3 id="result-title" tabindex="-1">Форма заполнена.<br>Заявка не отправлена.</h3>
-          <p>Так будут выглядеть сведения для мастера после подключения настоящей отправки.</p>
+          <span class="result-icon" aria-hidden="true">✓</span><p class="eyebrow muted">ПРОВЕРЬТЕ ПЕРЕД ОТПРАВКОЙ</p>
+          <h3 id="result-title" tabindex="-1">Проверьте тестовую заявку.</h3>
+          <p>Проверьте вымышленные сведения. Пока вы не нажали отдельную кнопку ниже, запроса к серверу нет.</p>
           <dl id="summary" class="summary"></dl>
-          <p class="demo-inline">Это учебный сайт: мастер не получил заявку и не будет звонить. Сайт сам не сохраняет ответы, но браузер может восстановить их. Для удаления из формы и итога нажмите «Очистить форму».</p>
+          <p class="demo-inline">Это не действующий мотосервис. Если отправка выполнена, сведения могут храниться в Formspree; очистка этой страницы не удаляет серверную запись. В кабинете её нужно удалить отдельно. Не используйте реальные контакты.</p>
+          <label class="sandbox-confirmation"><input id="sandbox-confirmation" type="checkbox"><span>Я использую только вымышленные данные и понимаю, что тест будет передан и может сохраниться в Formspree.</span></label>
+          <p class="delivery-reference">Сохраните номер для поиска теста: <code id="delivery-reference"></code></p>
+          <p id="delivery-status" class="delivery-status" role="status" aria-live="polite"></p>
+          <div class="delivery-actions"><button id="send-test" type="button" class="button primary" disabled>Отправить тест — новая вкладка</button></div>
           <div class="result-actions"><button id="edit-button" type="button" class="button secondary">Изменить ответы</button><button id="clear-button" type="button" class="text-button">Очистить форму</button></div>
         </section>
       </div>
@@ -131,7 +139,7 @@
         <details><summary>Я не знаю, что именно сломалось. Что писать?<span aria-hidden="true">+</span></summary><p>Опишите симптомы своими словами: когда возникает проблема, какие звуки слышны, что изменилось. Например: «После прогрева глохнет на холостых». Точный диагноз по одной заявке не ставится.</p></details>
         <details><summary>Можно узнать стоимость до приезда?<span aria-hidden="true">+</span></summary><p>Заявка помогает начать обсуждение, но не является расчётом. Стоимость зависит от модели, состояния мотоцикла, диагностики и согласованного объёма работ. Выдуманных цен в этом учебном проекте нет.</p></details>
         <details><summary>Что делать, если мотоцикл не на ходу?<span aria-hidden="true">+</span></summary><p>Укажите это в форме. В рабочем сервисе способ доставки и возможность приёма нужно обсудить с мастером. Не продолжайте движение при подозрении на опасную неисправность.</p></details>
-        <details><summary>Эта форма действительно отправляет заявку?<span aria-hidden="true">+</span></summary><p>Пока нет. Это учебный концепт для проверки дизайна и вопросов. Здесь нет реальной мастерской, приёма заявок или обратного звонка. Перед запуском нужно подключить получателя, добавить реальные сведения о сервисе и оформить обработку персональных данных.</p></details>
+        <details><summary>Эта форма действительно отправляет заявку?<span aria-hidden="true">+</span></summary><p>Подготовлена учебная отправка с GitHub Pages в Formspree. После отдельного нажатия браузер открывает ответ сервиса в новой вкладке. Получение подтверждается совпадающим номером теста в кабинете MOTO → Submissions. В локальном просмотре отправка отключена. Это не реальная запись на ремонт; уведомления отдельно не проверены.</p></details>
       </div>
     </section>
   </main>
