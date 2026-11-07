@@ -558,9 +558,12 @@ nextButton.disabled = false;
 (() => {
   const endpoint = "https://formspree.io/f/xrppvgzp";
   function isSupportedLocation(location) {
-    return location.protocol === "https:" &&
-      location.hostname === "ivanmikhailenko011-jpg.github.io" &&
+    if (location.protocol !== "https:") return false;
+    const onGithub = location.hostname === "ivanmikhailenko011-jpg.github.io" &&
       location.pathname.startsWith("/motoexpert/");
+    const onCustomDomain = location.hostname === "motoexpert-service.ru" ||
+      location.hostname === "www.motoexpert-service.ru";
+    return onGithub || onCustomDomain;
   }
   globalThis.MotoExpertRequests = Object.freeze({ endpoint, isSupportedLocation });
 })();
@@ -595,7 +598,7 @@ nextButton.disabled = false;
     sendButton.disabled = true;
     setStatus(supported
       ? "Проверьте ответы и подтвердите использование вымышленных данных. После отправки браузер откроет ответ Formspree в новой вкладке. Получение нужно проверить в кабинете MOTO → Submissions."
-      : "Здесь только просмотр: отправка разрешена на вашем опубликованном сайте GitHub Pages. В локальном файле и в предпросмотре данные не отправляются.");
+      : "Здесь только просмотр: отправка разрешена на вашем опубликованном сайте — на GitHub Pages или домене motoexpert-service.ru. В локальном файле и в предпросмотре данные не отправляются.");
   }
   confirmation.addEventListener("change", () => {
     sendButton.disabled = !supported || !confirmation.checked || attempted;
